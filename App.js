@@ -1,37 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
  import React from 'react';
- import type {Node} from 'react';
  import {
-   SafeAreaView,
-   ScrollView,
-   StatusBar,
-   ListItem,
-   Left,
-   Thumbnail,
-   Body,
-   H1,
+  ScrollView,
    StyleSheet,
    Text,
    useColorScheme,
    View,
    Image,
  } from 'react-native';
- import {images} from './images';
  
  import {
    Colors,
-   DebugInstructions,
-   Header,
-   LearnMoreLinks,
-   ReloadInstructions,
  } from 'react-native/Libraries/NewAppScreen';
+
  
  const Section = ({children, title}) => {
    const isDarkMode = useColorScheme() === 'dark';
@@ -61,20 +41,18 @@
   const backgroundStyle = {
      backgroundColor: Colors.lighter
    };
- class App extends React.Component {
  
-  render () {
    return (
-       <ScrollView style={styles.scrollView} >
+    <View>
          <View
            style={{
              backgroundColor: Colors.white        }}>
              <Image 
              source={{uri: 'https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?cs=srgb&dl=pexels-mica-asato-1082528.jpg&fm=jpg'}}
-             style={{ width: 380, height: 200, resizeMode: 'cover', margin: 20 }}
+             style={{ width: 380, height: 200, resizeMode: 'cover', margin: 10 }}
               />
            <Section title="Network Images">
-             <Text>Many of the images you will display in your app will not be available at compile time, or you will want to load some dynamically to keep the binary size down. </Text>
+             <Text>Many of the images you will display in your app will not be available at compile time, or you will want to load some dynamically to keep the binary size down. You can learn more about React Native and how to set up emulators here: </Text>
            </Section>
          </View>
          <View
@@ -82,15 +60,15 @@
              backgroundColor: Colors.white        }}>
              <Image 
              source={{uri: 'https://images.pexels.com/photos/1082528/pexels-photo-1082528.jpeg?cs=srgb&dl=pexels-mica-asato-1082528.jpg&fm=jpg'}}
-             style={{ width: 380, height: 200, resizeMode: 'cover', margin: 20 }}
+             style={{ width: 380, height: 200, resizeMode: 'cover', margin: 10 }}
               />
            <Section title="Network Images">
              <Text>Many of the images you will display in your app will not be available at compile time, or you will want to load some dynamically to keep the binary size down. </Text>
            </Section>
+         </View>
          </View>
          </ScrollView>
    );
- };
  };
  
  const styles = StyleSheet.create({
@@ -116,4 +94,3 @@
  });
  
  export default App;
-      
